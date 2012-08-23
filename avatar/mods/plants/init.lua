@@ -77,6 +77,7 @@ local add_plant = function(name_plant) -- register a wild plant
         tile_images = {img.."_wild.png"},
         inventory_image = img.."_wild.png",
         description = name_plant,
+        light_source = LIGHT_MAX - 1,
         drawtype = "plantlike",
         sunlight_propagates = true,
         paramtype = "light",

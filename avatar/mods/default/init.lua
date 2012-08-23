@@ -717,6 +717,7 @@ minetest.register_node("default:desert_stone", {
 minetest.register_node("default:stone_with_coal", {
 	description = "Coal Ore",
 	tiles = {"default_stone.png^default_mineral_coal.png"},
+	light_source = LIGHT_MAX - 1,
 	is_ground_content = true,
 	groups = {cracky=3},
 	drop = 'default:coal_lump',
@@ -726,6 +727,7 @@ minetest.register_node("default:stone_with_coal", {
 minetest.register_node("default:stone_with_iron", {
 	description = "Iron Ore",
 	tiles = {"default_stone.png^default_mineral_iron.png"},
+	light_source = LIGHT_MAX - 1,
 	is_ground_content = true,
 	groups = {cracky=3},
 	drop = 'default:iron_lump',
@@ -746,6 +748,7 @@ minetest.register_node("default:dirt_with_grass", {
 minetest.register_node("default:dirt_with_grass_footsteps", {
 	description = "Dirt with Grass and Footsteps",
 	tiles = {"default_grass_footsteps.png", "default_dirt.png", "default_dirt.png^default_grass_side.png"},
+	light_source = LIGHT_MAX - 1,
 	is_ground_content = true,
 	groups = {crumbly=3, not_in_creative_inventory=1},
 	drop = 'default:dirt',
@@ -836,6 +839,7 @@ minetest.register_node("default:jungletree", {
 minetest.register_node("default:junglegrass", {
 	description = "Jungle Grass",
 	drawtype = "plantlike",
+	light_source = LIGHT_MAX - 1,
 	visual_scale = 1.3,
 	tiles = {"default_junglegrass.png"},
 	inventory_image = "default_junglegrass.png",
@@ -848,8 +852,8 @@ minetest.register_node("default:junglegrass", {
 
 minetest.register_node("default:leaves", {
 	description = "Leaves",
-	drawtype = "allfaces_optional",
-	visual_scale = 1.3,
+	drawtype = "plantlike",
+	light_source = LIGHT_MAX - 1,
 	tiles = {"default_leaves.png"},
 	paramtype = "light",
 	groups = {snappy=3, leafdecay=3, flammable=2},
@@ -874,7 +878,7 @@ minetest.register_node("default:leaves", {
 minetest.register_node("default:cactus", {
 	description = "Cactus",
 	tiles = {"default_cactus_top.png", "default_cactus_top.png", "default_cactus_side.png"},
-	is_ground_content = true,
+	light_source = LIGHT_MAX - 1,
 	groups = {snappy=2,choppy=3,flammable=2},
 	sounds = default.node_sound_wood_defaults(),
 })
@@ -885,6 +889,7 @@ minetest.register_node("default:papyrus", {
 	tiles = {"default_papyrus.png"},
 	inventory_image = "default_papyrus.png",
 	wield_image = "default_papyrus.png",
+	light_source = LIGHT_MAX - 1,
 	paramtype = "light",
 	is_ground_content = true,
 	walkable = false,
@@ -978,6 +983,7 @@ minetest.register_node("default:wood", {
 minetest.register_node("default:mese", {
 	description = "Mese",
 	tiles = {"default_mese.png"},
+	light_source = LIGHT_MAX - 1,
 	is_ground_content = true,
 	groups = {cracky=1},
 	sounds = default.node_sound_defaults(),
@@ -1000,6 +1006,7 @@ minetest.register_node("default:water_flowing", {
 		{name="default_water.png", backface_culling=false},
 		{name="default_water.png", backface_culling=true},
 	},
+	light_source = LIGHT_MAX -1,
 	alpha = WATER_ALPHA,
 	paramtype = "light",
 	walkable = false,
@@ -1023,6 +1030,7 @@ minetest.register_node("default:water_source", {
 		-- New-style water source material (mostly unused)
 		{name="default_water.png", backface_culling=false},
 	},
+	light_source = LIGHT_MAX -5,
 	alpha = WATER_ALPHA,
 	paramtype = "light",
 	walkable = false,
